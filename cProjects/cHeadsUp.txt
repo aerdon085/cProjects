@@ -1,0 +1,14 @@
+Initial problem encountered when setting up C programming for VS Code:
+1. Program, when run, is displayed on VS Code's integrated Terminal rather than Output (when compared to other setups).
+
+Solutions found so far for:
+1. Using Code Runner extension, uncheck "Code Runner: Run in Terminal" option
+
+Extensions installed in order to work on C/C++:
+1. C/C++ Extension
+2. Code Runner
+
+Processes gone through in order to work on C using VS Code:
+1. MSYS2 installation (gcc and g installation, and gdb debugger)
+2. mingw-w64
+3. Path environment variable
