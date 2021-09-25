@@ -2,3 +2,5 @@ C Programming Progress
 
 1| Comments
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=8&t=3140s
+2| Getting User Input
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=11&t=3613s
