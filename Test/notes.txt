@@ -4,5 +4,7 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=8&t=3140s
 2| Getting User Input
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=11&t=3613s
-2| Building Basic Calculator
+3| Building Basic Calculator
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=13&t=4328s
+4| Arrays
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=12&t=5189s
