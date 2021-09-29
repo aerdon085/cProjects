@@ -8,3 +8,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=13&t=4328s
 4| Arrays
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=12&t=5189s
+5| Function
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=23&t=5804s
+
+Exercise can be found in this link:
+https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
