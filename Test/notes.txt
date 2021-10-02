@@ -7,6 +7,7 @@ scanf
 arrays
 functions
 return statement
+if statements
 
 C Programming Progress
 
@@ -22,6 +23,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=23&t=5804s
 6| If statements
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=42&t=6801s
+7| Building a better Calculator
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=42&t=7631s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
