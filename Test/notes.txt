@@ -3,11 +3,13 @@ Pointers
 #include
 (const) int, double/float, char
 printf
+escape sequence
 scanf
 arrays
 functions
 return statement
 if statements
+switch
 
 C Programming Progress
 
