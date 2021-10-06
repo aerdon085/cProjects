@@ -1,6 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <math.h>
+
+struct Student
+{
+    char name[50];
+    char major[50];
+    int age;
+    double gpa;
+};
 
 int main()
 {
@@ -44,7 +53,7 @@ int main()
 
     char inputOneLet;
     printf("\nPlease enter one-letter password: ");
-    scanf("%c", &inputOneLet);
+    scanf(" %c", &inputOneLet);
     printf("One letter password entered is %c", inputOneLet);
 
     char inputPass[20];
@@ -67,6 +76,36 @@ int main()
     printf("Enter second number: ");
     scanf("%lf", &num2);
     printf("Sum is %f", num1 + num2);
+
+    // SECTION
+    // rewriting string
+
+    char month[] = "March";
+    printf("%s\n", month);
+    strcpy(month, "April");
+    printf("%s\n", month);
+
+    // SECTION
+    // arrays
+
+    char faveInitial[] = {'A', 'B', 'C'};
+    printf("%c", faveInitial[0]);
+
+    // SECTION
+    // structs
+
+    struct Student student1;
+    struct Student student2;
+    student1.age = 22;
+    student1.gpa = 3.2;
+    strcpy(student1.name, "James");
+    student2.age = 25;
+    student2.gpa = 4.0;
+    strcpy(student2.name, "Jim");
+    printf("%s is %s\'s best friend.", student2.name, student1.name);
+
+    // SECTION
+    // while loop - executes code until false
 
     return 0;
 }
