@@ -105,7 +105,56 @@ int main()
     printf("%s is %s\'s best friend.", student2.name, student1.name);
 
     // SECTION
-    // while loop - executes code until false
+    // while loop - executes code first until false
+
+    int index = 6;
+    while (index <= 5)
+    {
+        printf("%d\n", index);
+        index += 1;
+    }
+
+    // SECTION
+    // do while - executes code first before it checks whether to execute again
+
+    int index1 = 6;
+    do
+    {
+        printf("%d\n", index1);
+        index1++;
+    } while (index1 <= 5);
+
+    // SECTION
+    // while and if...else (if)
+
+    int inputGuess;
+    int attempt = 3;
+    int secretNumber = 5;
+
+    printf("Please input guess: ");
+    scanf("%d", &inputGuess);
+    attempt -= 1;
+    printf("Number of attempts left: %d\n", attempt);
+
+    while (inputGuess != secretNumber && attempt != 0)
+    {
+        printf("%d is incorrect!\nPlease input guess: ", inputGuess);
+        scanf("%d", &inputGuess);
+        attempt -= 1;
+        printf("Number of attempts left: %d\n", attempt);
+    }
+
+    if (inputGuess != secretNumber && attempt == 0)
+    {
+        printf("You lose!\n");
+    }
+    else if (inputGuess == secretNumber)
+    {
+        printf("You win!\n");
+    }
+
+    // SECTION
+    // for loop
 
     return 0;
 }

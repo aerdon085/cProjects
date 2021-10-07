@@ -31,6 +31,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=46&t=8487s
 9| While Loops
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=55&t=8983s
+10| For Loops
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10211s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
