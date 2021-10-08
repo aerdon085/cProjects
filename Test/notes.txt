@@ -10,6 +10,9 @@ functions
 return statement
 if statements
 switch
+structs
+while loops
+for loops
 
 C Programming Progress
 
@@ -33,6 +36,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=55&t=8983s
 10| For Loops
     https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10211s
+11| 2D Arrays and Nested Loops
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10745s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
