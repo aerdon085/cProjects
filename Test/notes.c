@@ -161,5 +161,28 @@ int main()
         printf("%d\n", i);
     }
 
+    // SECTION
+    // #include VS #define
+    /*
+    #include files are lists of functions that have to be typed before main() in order for functions such as "printf()" to be read by the compiler.
+    #include<> is for files that are built-in; #include"" is for files that contain functions that the programmer made or regularly uses that is found in built-in header files
+    #define is for defining constants (as opposed to variables)
+    when making custom header file, it must be saved with .h file extension and must be found in the same folder as the .c source code file*/
+
+    // SECTION
+    // 2d arrays and nested loops
+
+    int nums[3][2] /*data[index position][index position]*/ = {{1, 2}, {3, 4}, {5, 6}};
+    printf("%d", nums[1][0]);
+    int i, j; // nested loop
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            printf("%d", nums[i][j]);
+        }
+        printf("\n");
+    }
+
     return 0;
 }

@@ -1,6 +1,6 @@
 Pointers
 
-#include
+#include<>/#include""
 (const) int, double/float, char
 printf
 escape sequence
@@ -38,6 +38,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10211s
 11| 2D Arrays and Nested Loops
     https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10745s
+12| Memory Addresses
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=11350s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
