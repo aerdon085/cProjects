@@ -43,12 +43,12 @@ int main()
 
     int inputAge;
     printf("\nEnter your age: ");
-    scanf("%d", &inputAge);
+    scanf(" %d", &inputAge);
     printf("You are %d years old", inputAge);
 
     double inputDec;
     printf("\nEnter desired decimal number: ");
-    scanf("%lf", &inputDec);
+    scanf(" %lf", &inputDec);
     printf("The desired decimal number is %f", inputDec);
 
     char inputOneLet;
@@ -58,7 +58,7 @@ int main()
 
     char inputPass[20];
     printf("\nPlease enter password: ");
-    scanf("%s", inputPass); // scanf, when used for strings, does not read the rest of the string separated by the first space
+    scanf(" %s", inputPass); // scanf, when used for strings, does not read the rest of the string separated by the first space
     printf("Your password is %s", inputPass);
 
     char inputName[20];
@@ -72,10 +72,10 @@ int main()
     double num1;
     double num2;
     printf("\nThis is a calculator. Enter first number: ");
-    scanf("%lf", &num1);
+    scanf(" %lf", &num1);
     printf("Enter second number: ");
-    scanf("%lf", &num2);
-    printf("Sum is %f", num1 + num2);
+    scanf(" %lf", &num2);
+    printf("Sum is %f\n", num1 + num2);
 
     // SECTION
     // rewriting string
@@ -132,14 +132,14 @@ int main()
     int secretNumber = 5;
 
     printf("Please input guess: ");
-    scanf("%d", &inputGuess);
+    scanf(" %d", &inputGuess);
     attempt -= 1;
     printf("Number of attempts left: %d\n", attempt);
 
     while (inputGuess != secretNumber && attempt != 0)
     {
         printf("%d is incorrect!\nPlease input guess: ", inputGuess);
-        scanf("%d", &inputGuess);
+        scanf(" %d", &inputGuess);
         attempt -= 1;
         printf("Number of attempts left: %d\n", attempt);
     }
@@ -172,9 +172,9 @@ int main()
     // SECTION
     // 2d arrays and nested loops
 
-    int nums[3][2] /*data[index position][index position]*/ = {{1, 2}, {3, 4}, {5, 6}};
-    printf("%d", nums[1][0]);
-    int i, j; // nested loop
+    int nums[3][2] /*data[number of arrays inside array][number of items inside inner array]*/ = {{1, 2}, {3, 4}, {5, 6}};
+    printf("%d", nums[1][0]); // [index position of array inside the array][index position of item inside inner array]
+    int i, j;                 // nested loop
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 2; j++)
@@ -183,6 +183,71 @@ int main()
         }
         printf("\n");
     }
+
+    // SECTION
+    // 2d string array
+
+    char names[2][4][20] /*[number of arrays inside array][number of strings inside inner array][string length + 1 (null zero)]*/ = {{"Adrian", "Josh", "Tasch", "Jacob"}, {"Dave", "Bob", "Harry"}};
+    printf("%s\n", names[1][2]);
+    strcpy(names[1][2], "Hermione");
+    printf("%s\n", names[1][2]);
+    printf("Second array inside of main array names only have 3 names. Please input one more: ");
+    scanf(" %s", &names[1][3]);
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            printf("%s", names[i][j]);
+        }
+    }
+
+    // SECTION
+    // scanf with %d/%d/%d (use of forward slash to gather integer data in one prompt)
+
+    char pizzaTopping[24], ordinalPlaceD[3], ordinalPlaceM[3];
+    int pizzaSlices, pizzaMonth, pizzaDay, pizzaYear;
+    double pizzaCost;
+    printf("How much does pizza cost in your area? Please input your answer (XX.XX): ");
+    scanf(" %lf", &pizzaCost);
+    printf("Your favourite one-word pizza topping?: ");
+    scanf(" %s", &pizzaTopping);
+    printf("How many slices of pizza?: ");
+    scanf(" %d", &pizzaSlices);
+    printf("Delivery date? Please input forward slashes between designated numbers (DD/MM/YYYY): ");
+    scanf(" %d/%d/%d", &pizzaDay, &pizzaMonth, &pizzaYear); // forward slash crucial for functionality
+    if (pizzaDay == 1)
+    {
+        strcpy(ordinalPlaceD, "st");
+    }
+    else if (pizzaDay == 2)
+    {
+        strcpy(ordinalPlaceD, "nd");
+    }
+    else if (pizzaDay == 3)
+    {
+        strcpy(ordinalPlaceD, "rd");
+    }
+    else
+    {
+        strcpy(ordinalPlaceD, "th");
+    }
+    if (pizzaMonth == 1)
+    {
+        strcpy(ordinalPlaceM, "st");
+    }
+    else if (pizzaMonth == 2)
+    {
+        strcpy(ordinalPlaceM, "nd");
+    }
+    else if (pizzaMonth == 3)
+    {
+        strcpy(ordinalPlaceM, "rd");
+    }
+    else
+    {
+        strcpy(ordinalPlaceM, "th");
+    }
+    printf("Your pizza, topped with %s and sliced into %d pieces, will arrive at the %d%s of the %d%s month in the year %d for $%.2f.\n", pizzaTopping, pizzaSlices, pizzaDay, ordinalPlaceD, pizzaMonth, ordinalPlaceM, pizzaYear, pizzaCost);
 
     return 0;
 }
