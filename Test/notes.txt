@@ -13,6 +13,8 @@ switch
 structs
 while loops
 for loops
+memory addresses
+pointers
 
 C Programming Progress
 
@@ -40,6 +42,8 @@ C Programming Progress
     https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10745s
 12| Memory Addresses
     https://www.youtube.com/watch?v=KJgsSFOSQv0&t=11350s
+12| Pointers
+    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=61&t=11840s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php

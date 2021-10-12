@@ -249,5 +249,11 @@ int main()
     }
     printf("Your pizza, topped with %s and sliced into %d pieces, will arrive at the %d%s of the %d%s month in the year %d for $%.2f.\n", pizzaTopping, pizzaSlices, pizzaDay, ordinalPlaceD, pizzaMonth, ordinalPlaceM, pizzaYear, pizzaCost);
 
+    // SECTION
+    // memory address
+
+    int add = 30, add1 = 19;
+    printf("The physical memory address of var:add and add1 is at %p and %p respectively.\n", &add, &add1);
+
     return 0;
 }
