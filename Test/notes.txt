@@ -17,6 +17,8 @@ memory addresses
 pointers
 math operators
 (multiple) assignment operator
+compound operator
+typecast
 
 C Programming Progress
 

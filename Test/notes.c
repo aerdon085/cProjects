@@ -255,5 +255,19 @@ int main()
     int add = 30, add1 = 19;
     printf("The physical memory address of var:add and add1 is at %p and %p respectively.\n", &add, &add1);
 
+    // SECTION
+    // typecasting
+
+    int days = 7;
+    int primos = 60;
+    printf("Total primos in 7 days are %.2f", (float)(days * primos));
+
+    // SECTION
+    // typecasting pt2
+
+    int amountTires = 4;
+    float priceTires = 109.99;
+    printf("The total amount is %.2f.\n", (float)amountTires * priceTires);
+
     return 0;
 }

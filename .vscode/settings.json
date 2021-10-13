@@ -2,6 +2,7 @@
   "files.associations": {
     "stdio.h": "c",
     "stdlib.h": "c",
-    "TICTACTO.C": "cpp"
+    "TICTACTO.C": "cpp",
+    "math.h": "c"
   }
 }
