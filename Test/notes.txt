@@ -15,10 +15,16 @@ while loops
 for loops
 memory addresses
 pointers
-math operators
+math operators (+, -, %, ...)
 (multiple) assignment operator
-compound operator
+compound operator (-=, +=, *=, ...)
+relational operator (==, <, !=, ...)
+logical operator (&&, ||, and (!(x)))
+ternary operator (?)
 typecast
+FILE
+fprintf()
+fgets()
 
 C Programming Progress
 

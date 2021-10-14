@@ -269,5 +269,27 @@ int main()
     float priceTires = 109.99;
     printf("The total amount is %.2f.\n", (float)amountTires * priceTires);
 
+    // SECTION
+    // writing/appending files
+
+    FILE *fpointer = fopen("employees.txt", "w");
+    fprintf(fpointer, "Nice");
+    fclose(fpointer);
+
+    // SECTION
+    // reading files
+
+    char line[255];
+    FILE *fpointer = fopen("employees.txt", "r");
+    fgets(line, 255, fpointer);
+    printf("%s", line);
+    fclose(fpointer);
+
+    // SECTION
+    // conditional operator (?)
+
+    int numPear = 4;
+    printf("I ate %d pear%s.\n", numPear, (numPear > 1) ? ("s") : (""));
+
     return 0;
 }
