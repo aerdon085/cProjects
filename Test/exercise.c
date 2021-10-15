@@ -5,31 +5,19 @@
 
 int main()
 {
-    int ctr = 0;
+    double num1, num2, result;
+    char choice;
 
-    printf("%d\n", ++ctr);
-    printf("%d\n", ++ctr);
-    printf("%d\n", ++ctr);
-    printf("%d\n", ++ctr);
-    printf("%d\n", ++ctr);
-
-    printf("%d\n", --ctr);
-    printf("%d\n", --ctr);
-    printf("%d\n", --ctr);
-    printf("%d\n", --ctr);
-    printf("%d\n", --ctr);
-
-    printf("%d\n", ctr++);
-    printf("%d\n", ctr++);
-    printf("%d\n", ctr++);
-    printf("%d\n", ctr++);
-    printf("%d\n", ctr++);
-
-    printf("%d\n", ctr--);
-    printf("%d\n", ctr--);
-    printf("%d\n", ctr--);
-    printf("%d\n", ctr--);
-    printf("%d\n", ctr--);
+    do
+    {
+        printf("Please enter first number: ");
+        scanf(" %lf", &num1);
+        printf("Please enter second number: ");
+        scanf(" %lf", &num2);
+        printf("%f and %f is %.2f.\n", num1, num2, result = num1 + num2);
+        printf("Are you done? (Y/N)\n");
+        scanf(" %c", &choice);
+    } while ((choice != 'Y') && (choice != 'y'));
 
     return 0;
 }

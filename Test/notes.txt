@@ -12,6 +12,7 @@ if statements
 switch
 structs
 while loops
+do... while loops
 for loops
 memory addresses
 pointers
@@ -25,6 +26,9 @@ typecast
 FILE
 fprintf()
 fgets()
+sizeof()
+strlen()
+toupper()
 
 C Programming Progress
 

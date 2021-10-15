@@ -291,5 +291,22 @@ int main()
     int numPear = 4;
     printf("I ate %d pear%s.\n", numPear, (numPear > 1) ? ("s") : (""));
 
+    // SECTION
+    // sizeof() and strlen()
+
+    char size[] = "Adrian";
+    printf("The memory size of i is %d.\n", sizeof(size));
+    printf("The memory size of i is %d.\n", strlen(size));
+
+    // SECTION
+    // prefix and postfix increment/decrement operator
+
+    int pre = 0;
+    int post = 0;
+    while (pre < 5 && post < 5)
+    {
+        printf("a = %d\n", ++pre);  // prefix increment operator
+        printf("b = %d\n", post++); // postfix increment operator
+    }
     return 0;
 }
