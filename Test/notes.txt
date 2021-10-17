@@ -28,7 +28,9 @@ fprintf()
 fgets()
 sizeof()
 strlen()
-toupper()
+toupper() and tolower()
+%% for percent sign
+break and continue
 
 C Programming Progress
 
