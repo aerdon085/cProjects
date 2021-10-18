@@ -9,7 +9,7 @@ arrays
 functions
 return statement
 if statements
-switch
+switch statement
 structs
 while loops
 do... while loops
@@ -31,6 +31,7 @@ strlen()
 toupper() and tolower()
 %% for percent sign
 break and continue
+exit()
 
 C Programming Progress
 

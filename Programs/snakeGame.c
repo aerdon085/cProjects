@@ -83,7 +83,7 @@ void input()
 // function for logic movement
 void logic()
 {
-    sleep(1);
+    sleep(0.05);
     switch (flag)
     {
     case 1:
