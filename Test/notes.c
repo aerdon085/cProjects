@@ -308,5 +308,26 @@ int main()
         printf("a = %d\n", ++pre);  // prefix increment operator
         printf("b = %d\n", post++); // postfix increment operator
     }
+
+    // SECTION
+    // getchar() for getting one buffered input char and putchar() for displaying; getch() and putch() for unbuffered
+    // char I/O functions must be used with int data type instead of char
+
+    int getCharNum, gCNEqual;
+    char inputChar[25];
+    printf("Please input at least 25 characters.\n");
+    for (getCharNum = 0; getCharNum < 25; getCharNum++)
+    {
+        inputChar[getCharNum] = getchar();
+        if (inputChar[getCharNum] == '\n')
+        {
+            gCNEqual = getCharNum;
+            break;
+        }
+    }
+    for (getCharNum = 0; getCharNum < gCNEqual; getCharNum++)
+    {
+        putchar(inputChar[getCharNum]);
+    }
     return 0;
 }

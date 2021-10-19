@@ -23,15 +23,20 @@ relational operator (==, <, !=, ...)
 logical operator (&&, ||, and (!(x)))
 ternary operator (?)
 typecast
-FILE
-fprintf()
-fgets()
 sizeof()
 strlen()
-toupper() and tolower()
 %% for percent sign
 break and continue
-exit()
+exit(0) for successful and intended termination; and exit(1) otherwise
+putchar() and putch()
+getchar() and getch()
+isalpha(), isupper(), islower(), and isdigit()
+toupper() and tolower()
+strcat()
+puts() and gets()
+fgets()
+FILE
+fprintf()
 
 C Programming Progress
 
