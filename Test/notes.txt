@@ -38,34 +38,13 @@ fgets()
 FILE
 fprintf()
 
-C Programming Progress
-
-1| Comments
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=8&t=3140s
-2| Getting User Input
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=11&t=3613s
-3| Building Basic Calculator
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=13&t=4328s
-4| Arrays
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=12&t=5189s
-5| Function
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=23&t=5804s
-6| If statements
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=42&t=6801s
-7| Building a better Calculator
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=42&t=7631s
-8| Structs
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=46&t=8487s
-9| While Loops
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=55&t=8983s
-10| For Loops
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10211s
-11| 2D Arrays and Nested Loops
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=10745s
-12| Memory Addresses
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&t=11350s
-12| Pointers
-    https://www.youtube.com/watch?v=KJgsSFOSQv0&list=WL&index=61&t=11840s
+Libraries used:
+stdio.h
+stdlib.h
+string.h
+math.h
+conio.h
+ctype.h
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
