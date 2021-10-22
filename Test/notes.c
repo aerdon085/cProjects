@@ -329,5 +329,21 @@ int main()
     {
         putchar(inputChar[getCharNum]);
     }
+
+    // SECTION: puts() and gets()
+
+    char address[25];
+    puts("Nice bruh.");
+    puts("Nice bruh.");
+    // with puts() no need for \n; both puts() and gets() automatically add a \n
+    gets(address);
+    // strlen counts up before terminating null character
+    for (int i = 0; i < strlen(address); i++)
+    {
+        printf("%d", i + 1);
+    }
+
+    // SECTION:
+
     return 0;
 }

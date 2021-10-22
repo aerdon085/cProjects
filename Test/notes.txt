@@ -1,6 +1,7 @@
 Pointers
 
 #include<>/#include""
+#define
 (const) int, double/float, char
 printf
 escape sequence
@@ -34,6 +35,8 @@ isalpha(), isupper(), islower(), and isdigit()
 toupper() and tolower()
 strcat()
 puts() and gets()
+floor(), ceil(), fabs(), pow(), sqrt()
+rand() and srand()
 fgets()
 FILE
 fprintf()
@@ -45,6 +48,7 @@ string.h
 math.h
 conio.h
 ctype.h
+time.h
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php
