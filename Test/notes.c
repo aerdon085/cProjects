@@ -343,7 +343,12 @@ int main()
         printf("%d", i + 1);
     }
 
-    // SECTION:
+    // SECTION: character arrays printable as strings if las element initialized with null zero
+
+    char someWord[7] = {'I', 't', 'a', 'l', 'i', 'a'};
+    printf("%c\n", someWord[0]);
+    char someName[7] = {'A', 'd', 'r', 'i', 'a', 'n', '\0'};
+    printf("%s\n", someName);
 
     return 0;
 }

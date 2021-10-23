@@ -3,6 +3,7 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "TICTACTO.C": "cpp",
-    "math.h": "c"
+    "math.h": "c",
+    "string.h": "c"
   }
 }

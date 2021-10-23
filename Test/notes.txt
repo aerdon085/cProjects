@@ -3,10 +3,10 @@ Pointers
 #include<>/#include""
 #define
 (const) int, double/float, char
-printf
+printf and scanf()
 escape sequence
-scanf
 arrays
+null character/null zero
 functions
 return statement
 if statements
@@ -24,8 +24,7 @@ relational operator (==, <, !=, ...)
 logical operator (&&, ||, and (!(x)))
 ternary operator (?)
 typecast
-sizeof()
-strlen()
+sizeof() and strlen()
 %% for percent sign
 break and continue
 exit(0) for successful and intended termination; and exit(1) otherwise
