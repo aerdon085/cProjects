@@ -36,6 +36,7 @@ strcat()
 puts() and gets()
 floor(), ceil(), fabs(), pow(), sqrt()
 rand() and srand()
+time_t and time()
 fgets()
 FILE
 fprintf()
@@ -48,6 +49,9 @@ math.h
 conio.h
 ctype.h
 time.h
+
+1|Pointer types, pointer arithmetic, void pointers
+https://www.youtube.com/watch?v=zuegQmMdy8M&list=WL&index=48&t=1325s
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php

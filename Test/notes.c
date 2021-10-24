@@ -350,5 +350,12 @@ int main()
     char someName[7] = {'A', 'd', 'r', 'i', 'a', 'n', '\0'};
     printf("%s\n", someName);
 
+    // SECTION: srand() and rand()
+    // srand() sets the seed which is used by rand() to generate “random” numbers and must be called first before rand() is called
+
+    time_t t;        // time of day
+    srand(time(&t)); // seed rand() with time as "random" number value for srand()
+    printf("%d", (rand() % 5) + 1);
+
     return 0;
 }
