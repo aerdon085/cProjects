@@ -52,6 +52,8 @@ time.h
 
 1|Pointer types, pointer arithmetic, void pointers
 https://www.youtube.com/watch?v=zuegQmMdy8M&list=WL&index=48&t=1325s
+2|Pointers as function arguments
+https://youtu.be/zuegQmMdy8M?t=2541
 
 Exercise can be found in this link:
 https://www.w3resource.com/c-programming-exercises/basic-declarations-and-expressions/index.php

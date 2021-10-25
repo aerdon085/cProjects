@@ -357,5 +357,26 @@ int main()
     srand(time(&t)); // seed rand() with time as "random" number value for srand()
     printf("%d", (rand() % 5) + 1);
 
+    // SECTION: pointers
+
+    int x = 1;
+    int *p;
+    p = &x;
+    int **q;
+    q = &p;
+    int ***r;
+    r = &q;
+    // p = &x; *p = x;
+    // q = &p; *q = &x; **q = x;
+    // r = &q; *r = &p; **r = &x; ***r = x;
+    // each pointer, after pointing to another pointer, stores the address of the pointer before it;
+    // those pointers without the asterisk, when called, refer to the immediate address of the pointer before it;
+    // more *** means closer to the oldest memory address of the pointers pointing to the original variable;
+    // more *** also means closer to the original value;
+    printf("x is equal to %d; &x is equal to %d\n", x, &x);
+    printf("p is equal to %d; &p is equal to %d; *p is equal to %d\n", p, &p, *p);
+    printf("q is equal to %d; &q is equal to %d; *q is equal to %d; **q is equal to %d\n", q, &q, *q, **q);
+    printf("r is equal to %d; &r is equal to %d; *r is equal to %d; **r is equal to %d; ***r is equal to %d\n", r, &r, *r, **r, ***r);
+
     return 0;
 }
