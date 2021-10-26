@@ -4,6 +4,7 @@
     "stdlib.h": "c",
     "TICTACTO.C": "cpp",
     "math.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "time.h": "c"
   }
 }
