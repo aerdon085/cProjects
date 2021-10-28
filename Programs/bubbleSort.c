@@ -1,108 +1,130 @@
+/* DEVELOPER'S NOTES
+Program to-dos:
+- Put failsafe codes in case user enters inappropriate data during prompts.
+- Add ascending/descending order option for sorting.
+- String sorter mechanism on func:strMode()
+- Add sorter option for digits with decimals
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include <time.h>
 
-int arrAscend(int numArr[10]);
-int arrDescend(int numArr[10]);
+int strMode(int n, int n0);
+int alphaMode(int n);
+int numMode(int n);
 int main()
 {
-    int valArr[10];
     int didSwap = 0; // flag variable if successful
     char arrAns;
-    time_t t;
+    int isAlpha = 0, isNum = 0;
+    int typeAns, numAns, numAns0; // var for what data type and how many data respectively
 
-    srand(time(&t));
-
-    printf("Generating random elements...\nThe elements are: ");
-    // generates 10 random numbers and puts them on an array
-    for (int i = 0; i < 10; i++)
+    // prompt if input will be alpha or num
+    printf("What data type will your entry be?\n1. Strings\n2. Alphabet\n3. Number\n");
+    scanf(" %d", &typeAns);
+    if (typeAns > 3 || typeAns < 1)
     {
-        valArr[i] = (rand() % 100) + 1;
-        printf("%d ", valArr[i]);
-    }
-    printf("\b.\n");
-
-    // prompt sorting order (ascending/descending)
-    printf("How do you want your list ordered?\nPress 'A' for ascending (low to high), and 'D' for descending (high to low).\n");
-    scanf(" %c", &arrAns);
-    arrAns = toupper(arrAns);
-
-    // bubble sorting algorithm
-    if (arrAns == 'A')
-    {
-        arrAscend(valArr);
-        didSwap = 1;
-    }
-    else if (arrAns == 'D')
-    {
-        arrDescend(valArr);
-        didSwap = 1;
-    }
-    else
-    {
-        printf("Invalid input.\n");
+        printf("Invalid input. Terminating program...\n");
+        exit(0);
     }
 
-    if (didSwap == 1)
+    // prompt the maximum number of items to be entered
+    // afterwards, lead immediately to appropriate function to ask for the data to be manually entered
+    printf("What maximum number of data will you enter?\nATTENTION!\nPlease enter only an integer: ");
+    scanf(" %d", &numAns);
+
+    if (typeAns == 2)
+        alphaMode(numAns);
+    else if (typeAns == 3)
+        numMode(numAns);
+    else if (typeAns == 1)
     {
-        // prints out new order
-        printf("New order: ");
-        for (int i = 0; i < 10; i++)
-        {
-            printf("%d ", valArr[i]);
-        }
-        printf("\b.\n");
+        printf("Please enter the maximum characters you will enter per data.\nATTENTION!\nEnter only an integer.\nTo ensure that there will be no data corruption, input your entry after adding it by one (1).\n");
+        scanf(" %d", &numAns0);
+        printf("%d", numAns0);
+        strMode(numAns, numAns0);
     }
 
     return 0;
 }
 
-// bubble sorting modes
-int arrAscend(int numArr[10])
+// prompt modes
+int strMode(int n, int n0)
 {
-    int valHol1, valHol2; // value placeholders for switching
+    printf("Under development UwU");
+    return 0;
+}
+//
+int alphaMode(int n)
+{
+    char arr[n];
+    char temp;
 
-    for (int i = 0; i < 10; i++)
+    // prompt for data
+    printf("Please input %d data character(s).\n", n);
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 10; j++)
+        scanf(" %c", &arr[i]);
+    }
+
+    // sort ascending
+    printf("Entries received.\nSorting...\n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
         {
-            // see if numArr[i], the first value in the array, is less than j
-            if (numArr[i] < numArr[j])
+            if (toupper(arr[i]) < toupper(arr[j]))
             {
-                // temporarily hold value of array elements to be swapped
-                valHol1 = numArr[i];
-                valHol2 = numArr[j];
-                // swap values
-                numArr[i] = valHol2;
-                numArr[j] = valHol1;
-                // by this point, numArr[i] is now greater than numArr[j]
-                // continue inner loop:
-                continue;
+                // switch
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
 
+    for (int i = 0; i < n; i++)
+    {
+        printf("%c\n", arr[i]);
+    }
+
     return 0;
 }
-int arrDescend(int numArr[10])
+//
+int numMode(int n)
 {
-    int valHol1, valHol2;
+    int arr[n];
+    int temp;
 
-    for (int i = 0; i < 10; i++)
+    // prompt for data
+    printf("Please input %d data integer(s).\n", n);
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 10; j++)
+        scanf(" %d", &arr[i]);
+    }
+
+    // sort ascending
+    printf("Entries received.\nSorting...\n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
         {
-            if (numArr[i] > numArr[j])
+            if (arr[i] > arr[j])
             {
-                valHol1 = numArr[i];
-                valHol2 = numArr[j];
-                numArr[i] = valHol2;
-                numArr[j] = valHol1;
-                continue;
+                // switch
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d\n", arr[i]);
     }
 
     return 0;

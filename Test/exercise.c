@@ -2,13 +2,9 @@
 
 int main()
 {
-    if ('a' < 'b')
+    if ('z' > 'a')
     {
         printf("a is greater");
-    }
-    else if ('a' > 'b')
-    {
-        printf("b is greater");
     }
 
     return 0;
