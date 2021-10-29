@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-    if ('z' > 'a')
-    {
-        printf("a is greater");
-    }
+    time_t t;
+    srand(time(&t));
 
-    return 0;
+    for (int i = 0; i < 1000; i++)
+    {
+        printf("%d\n", (rand() % 20) + 1);
+    }
 }
