@@ -378,5 +378,23 @@ int main()
     printf("q is equal to %d; &q is equal to %d; *q is equal to %d; **q is equal to %d\n", q, &q, *q, **q);
     printf("r is equal to %d; &r is equal to %d; *r is equal to %d; **r is equal to %d; ***r is equal to %d\n", r, &r, *r, **r, ***r);
 
+    // SECTION: the overlap in similarity of an array and pointer
+
+    int vals[5] = {10, 20, 30, 40, 50};
+    printf("As I am able to dereference vals, an array name which is ultimately a pointer, whose 5th element is %d, it is the same as calling it by its subscript vals[4] with the value of %d.\n", *(vals + 4), vals[4]);
+    // consider the following:
+    char name[] = "Adrian";
+    char *pName = "Luzon";                       // The only difference is name is a pointer CONSTANT while pName is a pointer VARIABLE
+    printf("%c\n", *(name + 0));                 // 'A'
+    printf("%c and %c\n", *(pName + 0), *pName); // 'L'
+    printf("%s", pName);                         // "Luzon"
+    gets(pName);                                 // without the hassle of strcpy, but has the danger of data overflow when input is more than initial data
+    // ATTENTION: why pName, as instantiated, must be enclosed in a parenthesis in an operation
+    printf("%c\n", *name + 1);  // 'B'
+    printf("%c\n", *pName + 1); // 'M'
+    // because *pName inevitably refers ONLY to the first character of the string, adding one to it will turn it into letter M
+
+    // SECTION:
+
     return 0;
 }

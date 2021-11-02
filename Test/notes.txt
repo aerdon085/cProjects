@@ -17,6 +17,7 @@ do... while loops
 for loops
 memory addresses
 pointers
+& (address-of operator) and * (deferencing operator)
 math operators (+, -, %, ...)
 (multiple) assignment operator
 compound operator (-=, +=, *=, ...)
