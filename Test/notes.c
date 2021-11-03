@@ -394,7 +394,30 @@ int main()
     printf("%c\n", *pName + 1); // 'M'
     // because *pName inevitably refers ONLY to the first character of the string, adding one to it will turn it into letter M
 
+    // SECTION: array of pointers
+
+    int *pArray[10];
+    int num10 = 10;
+    *pArray = &num10;
+
+    printf("*pArray (%d) and &num10 (%d) is the same.\n", *pArray, &num10);
+    // because pArray is a pointer to only the first element, and *pArray is a pointer to num10 that is the first element
+    printf("%d", **pArray);
+    // therefore, to dereference num10 is either to use **pArray or *pArray[0], or *(pArray + 0)
+
     // SECTION:
+
+    char *movies[5] = {"Iron Man", "Thor"};
+    int movieRating[2] = {10, 9};
+    int *rating0 = &movieRating[0];
+    scanf(" %d", &*rating0);
+
+    // *movies[0] == **movies == I
+    // movies[0] == *movies == address of I
+    // *(movies + 0) == Iron Man
+    // (movies + 0) == address of Iron Man
+    // *rating0 == 10
+    // rating == address of 10
 
     return 0;
 }

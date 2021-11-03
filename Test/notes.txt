@@ -38,7 +38,7 @@ puts() and gets()
 floor(), ceil(), fabs(), pow(), sqrt()
 rand() and srand()
 time_t and time()
-fgets()
+fgets(destination, max, stdin)
 FILE
 fprintf()
 
