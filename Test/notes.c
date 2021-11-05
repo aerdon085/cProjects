@@ -406,6 +406,7 @@ int main()
     // therefore, to dereference num10 is either to use **pArray or *pArray[0], or *(pArray + 0)
 
     // SECTION: array of pointers pt2
+
 	// An array name is really just a pointer constant that points to the first element in the array. Unlike pointer variables, an array name can’t change. This is the primary reason an array name can’t appear on the left side of an equals sign. Using pointers allows more flexibility than arrays. You can directly assign a string literal to a character pointer variable, whereas you must use the strcpy() function to assign strings to arrays.
 
     char *movies[2] = { "Iron Man", "Thor" };
