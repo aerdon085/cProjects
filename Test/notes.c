@@ -407,45 +407,45 @@ int main()
 
     // SECTION: array of pointers pt2
 
-	// An array name is really just a pointer constant that points to the first element in the array. Unlike pointer variables, an array name can’t change. This is the primary reason an array name can’t appear on the left side of an equals sign. Using pointers allows more flexibility than arrays. You can directly assign a string literal to a character pointer variable, whereas you must use the strcpy() function to assign strings to arrays.
+    // An array name is really just a pointer constant that points to the first element in the array. Unlike pointer variables, an array name can’t change. This is the primary reason an array name can’t appear on the left side of an equals sign. Using pointers allows more flexibility than arrays. You can directly assign a string literal to a character pointer variable, whereas you must use the strcpy() function to assign strings to arrays.
 
-    char *movies[2] = { "Iron Man", "Thor" };
-	char *name;	
-	printf("%d\n", movies); // add of Iron Man
-	printf("%s\n", *movies); // Iron Man
-	printf("%d\n", &*movies);  // add of Iron Man
-	printf("%s\n", movies[0]); // Iron Man
-	printf("%d\n", &movies[0]); // add of Iron Man
-	printf("%s\n", *(movies+0)); // Iron Man
-	printf("%d\n", &*(movies+0)); // Iron Man
-	// *movies == movies[0] == *(movies+0) == "Iron Man"
-	// movies == &*movies ==&movies[0] == &*(movies+0) == address of Iron Man
-	printf("\n\n");
-	printf("%d\n", *movies);
-	printf("%c\n", **movies);
-	printf("%d\n", &**movies);
-	printf("%c\n", *movies[0]);
-	printf("%d\n", &*movies[0]);
-	printf("%c\n", **(movies+0));
-	printf("%d\n", &**(movies+0));
-	printf("\n\n");
-	// switching and assigning string values is now similar to int or char
-	// now not requiring strcpy()
-	printf("%s is at position index 0 and %s at 1.\n", movies[0], movies[1]);
-	name = movies[0];
-	movies[0] = movies[1];
-	movies[1] = name;
-	printf("Movie at index position 0 is now %s, ", movies[0]);
-	printf("and %s at 1.\n", movies[1]);
-	printf("\n\n");
-	// to demonstrate its now-likeness with int or char assignment logic
-	int num01[2] = {1, 2};
-	int num02;
-	printf("Number %d is at index position 0 and number %d at 1.\n", num01[0], num01[1]);
-	num02 = num01[0];
-	num01[0] = num01[1];
-	num01[1] = num02;
-	printf("Number %d is now at index position 1 and number %d at position 0.\n", num01[1], num01[0]);
+    char *movies[2] = {"Iron Man", "Thor"};
+    char *naMovie;
+    printf("%d\n", movies);         // add of Iron Man
+    printf("%s\n", *movies);        // Iron Man
+    printf("%d\n", &*movies);       // add of Iron Man
+    printf("%s\n", movies[0]);      // Iron Man
+    printf("%d\n", &movies[0]);     // add of Iron Man
+    printf("%s\n", *(movies + 0));  // Iron Man
+    printf("%d\n", &*(movies + 0)); // Iron Man
+    // *movies == movies[0] == *(movies+0) == "Iron Man"
+    // movies == &*movies ==&movies[0] == &*(movies+0) == address of Iron Man
+    printf("\n\n");
+    printf("%d\n", *movies);
+    printf("%c\n", **movies);
+    printf("%d\n", &**movies);
+    printf("%c\n", *movies[0]);
+    printf("%d\n", &*movies[0]);
+    printf("%c\n", **(movies + 0));
+    printf("%d\n", &**(movies + 0));
+    printf("\n\n");
+    // switching and assigning string values is now similar to int or char
+    // now not requiring strcpy()
+    printf("%s is at position index 0 and %s at 1.\n", movies[0], movies[1]);
+    naMovie = movies[0];
+    movies[0] = movies[1];
+    movies[1] = naMovie;
+    printf("Movie at index position 0 is now %s, ", movies[0]);
+    printf("and %s at 1.\n", movies[1]);
+    printf("\n\n");
+    // to demonstrate its now-likeness with int or char assignment logic
+    int num01[2] = {1, 2};
+    int num02;
+    printf("Number %d is at index position 0 and number %d at 1.\n", num01[0], num01[1]);
+    num02 = num01[0];
+    num01[0] = num01[1];
+    num01[1] = num02;
+    printf("Number %d is now at index position 1 and number %d at position 0.\n", num01[1], num01[0]);
 
     return 0;
 }
