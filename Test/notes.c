@@ -469,5 +469,26 @@ int main()
     // clear memory allocation
     free(temps);
 
+    // SECTION: multiple heap memory allocations
+
+    float *temps[2]; // an array of pointers that can be used to point to an array of heap memory whose size depends on var:num at [i]th iteration
+    int num;
+    // assuming there are two cities (temps[2]), prompt how much heap memory is required
+    for (int i = 0; i < 2; i++)
+    {
+        printf("How many readings for this city?\n");
+        scanf(" %d", &num);
+        printf("You will be entering %d data for this city.\n", num);
+        // allocate heap values
+        temps[i] = (float *)malloc(num * sizeof(float));
+    }
+    // at this point, temps[0] have x bytes allocated according to num at that [i] point of the iteration, and temps[1] likewise
+    // CODE REDACTED
+    // deallocate heap
+    for (int i = 0; i < 2; i++)
+    {
+        free(temps[i]);
+    }
+
     return 0;
 }
