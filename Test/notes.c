@@ -483,7 +483,7 @@ int main()
         temps[i] = (float *)malloc(num * sizeof(float));
     }
     // at this point, temps[0] have x bytes allocated according to num at that [i] point of the iteration, and temps[1] likewise
-    // CODE REDACTED
+    // CODE REDACTED, one may search for tempRec.c file for initial demo
     // deallocate heap
     for (int i = 0; i < 2; i++)
     {
