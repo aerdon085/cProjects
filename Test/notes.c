@@ -418,7 +418,7 @@ int main()
     printf("%s\n", *(movies + 0));  // Iron Man
     printf("%d\n", &*(movies + 0)); // Iron Man
     // *movies == movies[0] == *(movies+0) == "Iron Man"
-    // movies == &*movies ==&movies[0] == &*(movies+0) == address of Iron Man
+    // movies == &*movies == &movies[0] == &*(movies+0) == address of Iron Man
     printf("\n\n");
     printf("%d\n", *movies);
     printf("%c\n", **movies);
@@ -445,6 +445,29 @@ int main()
     num01[0] = num01[1];
     num01[1] = num02;
     printf("Number %d is now at index position 1 and number %d at position 0.\n", num01[1], num01[0]);
+
+    // SECTION: heap memory
+
+    int *temps;
+    temps = (int *)malloc(3 * sizeof(int));
+    // when malloc() fails to allocate memory, it points to a null value 0 and can therefore be used for any failsafe methods like such:
+    if (temps == 0)
+    {
+        printf("Not enough memory.\n");
+        exit(1);
+    }
+    // store data
+    for (int i = 0; i < 3; i++)
+    {
+        temps[i] = i + 10;
+    }
+    // print
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d\n", temps[i]);
+    }
+    // clear memory allocation
+    free(temps);
 
     return 0;
 }

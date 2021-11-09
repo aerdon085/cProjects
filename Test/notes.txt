@@ -39,6 +39,7 @@ floor(), ceil(), fabs(), pow(), sqrt()
 rand() and srand()
 time_t and time()
 fgets(destination, max, stdin)
+malloc() and free()
 FILE
 fprintf()
 
