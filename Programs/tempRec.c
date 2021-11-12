@@ -14,7 +14,7 @@ int main()
         // allocate heap values
         temps[i] = (float *)malloc(num[i] * sizeof(float));
         // check for failure of allocation
-        if (!temps[0]) /* can also be written if (temps[i] == 0) */
+        if (!temps[i]) /* can also be written if (temps[i] == 0) */
         {
             printf("Memory allocation failure.\n");
             exit(1);

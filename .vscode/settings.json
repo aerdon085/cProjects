@@ -5,6 +5,7 @@
     "TICTACTO.C": "cpp",
     "math.h": "c",
     "string.h": "c",
-    "time.h": "c"
+    "time.h": "c",
+    "ctype.h": "c"
   }
 }
