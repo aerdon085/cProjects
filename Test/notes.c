@@ -490,5 +490,12 @@ int main()
         free(temps[i]);
     }
 
+    // SECTION: malloc(), a quick note
+
+    // malloc() allocates heap memory for your programs, and forget not to then use free() when using them
+    // heap can be accessed via a pointer variable, and you can then get to the rest of the allocated memory using array notation based on the pointer assigned by the malloc()
+    // don’t always rely on regular arrays to hold a program’s data, sometimes a program needs data for just a short time, and using the heap makes better use of your memory resources
+    // check to make sure malloc() worked properly for malloc() returns a 0 if the allocation fails
+
     return 0;
 }
