@@ -38,10 +38,10 @@ puts() and gets()
 floor(), ceil(), fabs(), pow(), sqrt()
 rand() and srand()
 time_t and time()
-fgets(destination, max, stdin)
 malloc() and free()
 FILE
-fprintf()
+fgets(destination, max, stdin)
+fprintf(origin_file, data)
 
 Libraries used:
 stdio.h
