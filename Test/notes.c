@@ -497,5 +497,63 @@ int main()
     // don’t always rely on regular arrays to hold a program’s data, sometimes a program needs data for just a short time, and using the heap makes better use of your memory resources
     // check to make sure malloc() worked properly for malloc() returns a 0 if the allocation fails
 
+    // SECTION: structs pt2
+
+    // struct declarations should ideally be outside functions if you want them reused
+    struct user
+    {
+        char username[10];
+        char name[10];
+        int age;
+    };
+
+    struct user person[2];
+    strcpy(person[0].username, "aerdon");
+    person[0].age = 19;
+    printf("%s is %d years old.\n", person[0].username, person[0].age);
+
+    strcpy(person[1].username, "roxx");
+    person[1].age = 18;
+    printf("%s is %d years old.\n", person[1].username, person[1].age);
+
+    // SECTION: heap memory with structs
+
+    struct library
+    {
+        char title[21];
+        char author[21];
+        int pageNum;
+        float price;
+    };
+    // program prompts user to enter data according to the structure and prints them
+    struct library *book[3];
+    // pointer array names (for instance, *pBook) point to its array elements just like pointer struct variable names (in this instance *book) point to struct members (i.e. title, author, pageNum, and price)
+
+    // prompt user of the book[i]
+    for (int i = 0; i < 3; i++)
+    {
+        book[i] = (struct library *)malloc(sizeof(struct library));
+        // NOTICE: it is after allocating heap memory on structs that I realize, in this instance, var:library is merely the name of the structure of datas (as in structure that is merely a guide) and var:book is the struct variable, the very data set that uses this structure
+
+        printf("What's the title of the book?\n");
+        gets(book[i]->title);
+        printf("Who is the author?\n");
+        gets(book[i]->author);
+        printf("How many pages did it have?\n");
+        scanf(" %d", &book[i]->pageNum);
+        printf("WHat was the price of the book?\n");
+        scanf(" %f", &book[i]->price);
+        getchar(); // clears newline entry
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        printf("\n\nBook %d:\n", i + 1);
+        printf("Title: %s\n", book[i]->title);
+        printf("Author: %s\n", book[i]->author);
+        printf("Pages: %d\n", book[i]->pageNum);
+        printf("Price: %.2f\n", book[i]->price);
+    }
+
     return 0;
 }
