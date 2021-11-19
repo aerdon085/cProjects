@@ -6,6 +6,7 @@
     "math.h": "c",
     "string.h": "c",
     "time.h": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "unistd.h": "c"
   }
 }
