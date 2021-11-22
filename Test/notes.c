@@ -11,6 +11,17 @@ struct Student
     double gpa;
 };
 
+int procNum(int num)
+{
+    num += 10;
+    return num;
+}
+int procNum0(int *num)
+{
+    *num += 10;
+    return *num;
+}
+
 int main()
 {
     // SECTION
@@ -554,6 +565,18 @@ int main()
         printf("Pages: %d\n", book[i]->pageNum);
         printf("Price: %.2f\n", book[i]->price);
     }
+
+    // SECTION: passing pointers in functions
+
+    int num = 1;
+    int pNum = 1;
+
+    // passing by value
+    printf("%d\n", procNum(num)); // 11
+    printf("%d\n", num);          // 1; its variable unaffected
+    // passing by address
+    printf("%d\n", procNum0(&pNum)); // 11
+    printf("%d\n", pNum);            // 11; the originator variable has been changed
 
     return 0;
 }
