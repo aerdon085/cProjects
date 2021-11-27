@@ -578,5 +578,15 @@ int main()
     printf("%d\n", procNum0(&pNum)); // 11
     printf("%d\n", pNum);            // 11; the originator variable has been changed
 
+    // SECTION: reading an unknown number of inputs
+    // an example would be using a function that prompts entry and will keep on asking as long as the function will not throw an error
+
+    int ini, value;
+    while (scanf(" %d", &ini))
+    {
+        value += ini;
+        printf("%d\n", value);
+    }
+
     return 0;
 }
