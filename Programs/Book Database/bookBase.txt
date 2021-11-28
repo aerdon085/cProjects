@@ -1,21 +1,9 @@
 ===== LIST OF BOOKS =====
 
 
-Book 1 of 3:
+Book 1 of 1:
 
-Title: Rampage
-Author: Yes
-Pages: 300
-Price: 299.99
-Book 2 of 3:
-
-Title: Fault In Our Stars
-Author: Green
-Pages: 150
-Price: 199.99
-Book 3 of 3:
-
-Title: 12 Rules For Life
-Author: Peterson
-Pages: 200
-Price: 249.00
+Title: 1
+Author: 1
+Pages: 1
+Price: 1.00

@@ -1,21 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include "bookBase.h"
 FILE *fptr;
-
-int br()
-{
-    // function for section breaking
-    printf("\n\n=====     =====     =====\n");
-    return 0;
-}
-
-struct library
-{
-    char title[21];
-    char author[21];
-    int pages;
-    float price;
-};
 
 int main()
 {
@@ -80,6 +67,12 @@ int main()
         // print results on terminal
         br();
         printf("Book %d of %d:\n\nTitle: %s\nAuthor: %s\nPages: %d\nPrice: %.2f\n", i + 1, bookQuan, book[i]->title, book[i]->author, book[i]->pages, book[i]->price);
+        for (int j = 0; j < 3; j++)
+        {
+            char elip = '.';
+            printf("%c", elip);
+            sleep(1);
+        }
     }
 
     // program termination
